@@ -1,0 +1,229 @@
+[{
+    "featureType": "country",
+    "elementType": "labels",
+    "stylers": {
+        "visibility": "on"
+    }
+}, {
+    "featureType": "city",
+    "elementType": "labels",
+    "stylers": {
+        "visibility": "on"
+    }
+}, {
+    "featureType": "subway",
+    "elementType": "geometry",
+    "stylers": {
+        "visibility": "on"
+    }
+}, {
+    "featureType": "subway",
+    "elementType": "labels",
+    "stylers": {
+        "visibility": "off"
+    }
+}, {
+    "featureType": "subway",
+    "elementType": "labels.icon",
+    "stylers": {
+        "visibility": "off"
+    }
+}, {
+    "featureType": "railway",
+    "elementType": "geometry",
+    "stylers": {
+        "visibility": "on"
+    }
+}, {
+    "featureType": "railway",
+    "stylers": {
+        "curZoomRegionId": "0",
+        "curZoomRegion": "10,21",
+        "level": "10"
+    }
+}, {
+    "featureType": "railway",
+    "stylers": {
+        "curZoomRegionId": "0",
+        "curZoomRegion": "10,21",
+        "level": "11"
+    }
+}, {
+    "featureType": "railway",
+    "stylers": {
+        "curZoomRegionId": "0",
+        "curZoomRegion": "10,21",
+        "level": "12"
+    }
+}, {
+    "featureType": "railway",
+    "stylers": {
+        "curZoomRegionId": "0",
+        "curZoomRegion": "10,21",
+        "level": "13"
+    }
+}, {
+    "featureType": "railway",
+    "stylers": {
+        "curZoomRegionId": "0",
+        "curZoomRegion": "10,21",
+        "level": "14"
+    }
+}, {
+    "featureType": "railway",
+    "stylers": {
+        "curZoomRegionId": "0",
+        "curZoomRegion": "10,21",
+        "level": "15"
+    }
+}, {
+    "featureType": "railway",
+    "stylers": {
+        "curZoomRegionId": "0",
+        "curZoomRegion": "10,21",
+        "level": "16"
+    }
+}, {
+    "featureType": "railway",
+    "stylers": {
+        "curZoomRegionId": "0",
+        "curZoomRegion": "10,21",
+        "level": "17"
+    }
+}, {
+    "featureType": "railway",
+    "stylers": {
+        "curZoomRegionId": "0",
+        "curZoomRegion": "10,21",
+        "level": "18"
+    }
+}, {
+    "featureType": "railway",
+    "stylers": {
+        "curZoomRegionId": "0",
+        "curZoomRegion": "10,21",
+        "level": "19"
+    }
+}, {
+    "featureType": "railway",
+    "stylers": {
+        "curZoomRegionId": "0",
+        "curZoomRegion": "10,21",
+        "level": "20"
+    }
+}, {
+    "featureType": "railway",
+    "stylers": {
+        "curZoomRegionId": "0",
+        "curZoomRegion": "10,21",
+        "level": "21"
+    }
+}, {
+    "featureType": "railway",
+    "elementType": "geometry",
+    "stylers": {
+        "visibility": "off",
+        "curZoomRegionId": "0",
+        "curZoomRegion": "10,21",
+        "level": "10"
+    }
+}, {
+    "featureType": "railway",
+    "elementType": "geometry",
+    "stylers": {
+        "visibility": "off",
+        "curZoomRegionId": "0",
+        "curZoomRegion": "10,21",
+        "level": "11"
+    }
+}, {
+    "featureType": "railway",
+    "elementType": "geometry",
+    "stylers": {
+        "visibility": "off",
+        "curZoomRegionId": "0",
+        "curZoomRegion": "10,21",
+        "level": "12"
+    }
+}, {
+    "featureType": "railway",
+    "elementType": "geometry",
+    "stylers": {
+        "visibility": "off",
+        "curZoomRegionId": "0",
+        "curZoomRegion": "10,21",
+        "level": "13"
+    }
+}, {
+    "featureType": "railway",
+    "elementType": "geometry",
+    "stylers": {
+        "visibility": "off",
+        "curZoomRegionId": "0",
+        "curZoomRegion": "10,21",
+        "level": "14"
+    }
+}, {
+    "featureType": "railway",
+    "elementType": "geometry",
+    "stylers": {
+        "visibility": "off",
+        "curZoomRegionId": "0",
+        "curZoomRegion": "10,21",
+        "level": "15"
+    }
+}, {
+    "featureType": "railway",
+    "elementType": "geometry",
+    "stylers": {
+        "visibility": "off",
+        "curZoomRegionId": "0",
+        "curZoomRegion": "10,21",
+        "level": "16"
+    }
+}, {
+    "featureType": "railway",
+    "elementType": "geometry",
+    "stylers": {
+        "visibility": "off",
+        "curZoomRegionId": "0",
+        "curZoomRegion": "10,21",
+        "level": "17"
+    }
+}, {
+    "featureType": "railway",
+    "elementType": "geometry",
+    "stylers": {
+        "visibility": "off",
+        "curZoomRegionId": "0",
+        "curZoomRegion": "10,21",
+        "level": "18"
+    }
+}, {
+    "featureType": "railway",
+    "elementType": "geometry",
+    "stylers": {
+        "visibility": "off",
+        "curZoomRegionId": "0",
+        "curZoomRegion": "10,21",
+        "level": "19"
+    }
+}, {
+    "featureType": "railway",
+    "elementType": "geometry",
+    "stylers": {
+        "visibility": "off",
+        "curZoomRegionId": "0",
+        "curZoomRegion": "10,21",
+        "level": "20"
+    }
+}, {
+    "featureType": "railway",
+    "elementType": "geometry",
+    "stylers": {
+        "visibility": "off",
+        "curZoomRegionId": "0",
+        "curZoomRegion": "10,21",
+        "level": "21"
+    }
+}]
