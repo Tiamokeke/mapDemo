@@ -11,18 +11,14 @@ export default new Router({
     },
     {
       path: '/map',
-      redirect: "/map/railaways"
+      redirect: "/map/province"
     },
-    {
-      path: '/map/railaways',
-      name: '轨道线',
-      component: () =>
-        import("../page/Railaways/Railaways.vue")
-    }, {
+     {
         path: '/map/province',
         name: '省区规划',
         component: () =>
           import("../page/Province/Province.vue")
       }
+
   ]
 })
