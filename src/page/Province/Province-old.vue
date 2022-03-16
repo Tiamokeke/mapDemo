@@ -121,7 +121,51 @@ export default {
       // return [bdlng, bdlat]
       return { lng: bdlng, lat: bdlat };
     },
-     //获取地图缩放级别
+    getBoundary(value) {
+      for (var i = 0; i < value.length; i++) {
+        var cenLon = "";
+        var cenLat = "";
+        bdary.get(value[i], function (rs) {
+          //获取行政区
+          var count = rs.boundaries.length;
+          if (count === 0) {
+            return;
+          }
+          var list = rs.boundaries.fill().map(() => {
+            return [100 + Math.random(), 30 + Math.random()];
+          });
+          let lonMin = Math.min(...list.map((item) => item[0]));
+          let latMin = Math.min(...list.map((item) => item[1]));
+          let lonMax = Math.max(...list.map((item) => item[0]));
+          let latMax = Math.max(...list.map((item) => item[1]));
+          cenLon = (parseFloat(lonMax) + parseFloat(lonMin)) / 2;
+          cenLat = (parseFloat(latMax) + parseFloat(latMin)) / 2;
+          this.centerPosition={lng:cenLon,lat:cenLat};
+          console.log(this.centerPosition,"this.centerPosition");
+          var ply;
+          for (var i = 0; i < count; i++) {
+            ply = new BMap.Polygon(rs.boundaries[i], {
+              strokeWeight: 0.5,
+              strokeColor: "#B6B7BA",
+              fillColor: "",
+              fillOpacity: "1",
+            }); //建立多边形覆盖物
+            map.addOverlay(ply); //添加覆盖物
+          }
+        //    ply.addEventListener("mouseover", function () {
+             
+        //   //    ply.setFillColor("blue");//设置颜色
+        //   // ply.setFillOpacity(0.7); //设置的是色块的透明度。
+        // });
+        });
+      }
+      var labelProvince = new BMap.Label(value[i], {
+        offset: new BMap.Size(1, -1),
+        position: new BMap.Point(cenLon, cenLat),
+      });
+      map.addOverlay(labelProvince);
+    },
+    //获取地图缩放级别
     getLevel() {
       var that = this;
       map.addEventListener("zoomend", function (e) {
@@ -151,48 +195,6 @@ export default {
         }
       });
     },
-
-//监听鼠标移入
-mouseoverMark (value) {
-  var that=this;
-  map.addEventListener("mouseover",function(e){
-    console.log(value,"mouseoverMark");
-       //加了定时器是防止频繁触发移入事件
-      clearTimeout(that.c);
-      that.c = setTimeout(() => {
-        var area="上海市"
-        //这是通过传入省或者市或者区，然后画出该区域
-        that.addDistrict(area)//该函数在下面有
-      }, 50)
-  })
-  },
-
-    addDistrict (area) {
-      console.log(area,"area");
-     //Bmap和map都是其他地方定义在全局
-      let blist = [];
-       //通过传进去的对应的省或者市，或者区，获取到对应的区域
-      bdary.get(area, (rs) => {       //获取行政区域
-        var count = rs.boundaries.length; //行政区域的点有多少个
-        for (var j = 0; j < count; j++) {
-          blist.push({ points: rs.boundaries[j], name: area});
-        }
-        for (var i = 0; i < blist.length; i++) {
-          //添加多边形层并显示
-          var ply = new BMap.Polygon(blist[i].points, {
-            strokeWeight: 1,   //边框宽度
-            strokeColor: "#014F99",   //边框颜色
-            fillColor: " #DDE4F0"//填充颜色
-          }); //建立多边形覆盖物
-          ply.name = blist[i].name;
-            //画点位
-          map.addOverlay(ply);
-        }
-      });
-    },
-
-
-   
     // //鼠标移入地图时该行政区域高亮
     // mouseover(area) {
     //
@@ -212,7 +214,7 @@ mouseoverMark (value) {
         map.addOverlay(labelProvince);
       });
       this.getLevel();
-      this.mouseoverMark(this.provinceNameArr);
+      // this.getBoundary(this.provinceNameArr);
     },
 
     //画城市
